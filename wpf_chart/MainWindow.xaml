@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Wpf.CartesianChart.Using_DateTime.DateTime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="355.046" d:DesignWidth="367.431">
+    <Grid>
+        <StackPanel>
+            <lvc:CartesianChart Series="{Binding Series}"  Name="mychart" Height="210" >
+
+                <lvc:CartesianChart.AxisX >
+                    <lvc:Axis LabelFormatter="{Binding Formatter}" Name="xxx" MaxValue="50"  Title="Time" DisableAnimations="True" ></lvc:Axis >
+
+                </lvc:CartesianChart.AxisX>
+
+
+
+
+
+
+            </lvc:CartesianChart>
+            <Button x:Name="button1" Content="dELL" Click="button1_Click" Width="100"/>
+            <Button x:Name="button" Content="gENERATE" Click="button_Click" Width="100"/>
+            <Button x:Name="ZOOM_IN" Content="ZOOM +" Click="ZOOM_IN_Click" Width="100" />
+            <Button x:Name="ZOOM_OUT" Content="ZOOM-" Click="ZOOM_OUT_Click" Width="100"/>
+            <Button x:Name="MOVE" Content="---->" Click="MOVE_Click" Width="55"/>
+            <Button x:Name="MOVE_MinUS" Content="&lt;----"  Click="MOVE_MinUS_Click" Width="55"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
